@@ -47,10 +47,9 @@ public class MainActivity extends AppCompatActivity {
         buttonLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Start the LoginActivity when the "LOG IN" button is clicked
-                Intent loginIntent = new Intent(MainActivity.this, LoginActivity.class);
-                startActivity(loginIntent);
+                openLoginActivity();
             }
+
         });
 
         buttonRegister.setOnClickListener(new View.OnClickListener() {
@@ -64,13 +63,22 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-        binding.buttonLogin.setOnClickListener(new View.OnClickListener() {
+
+
+        binding.buttonRegister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAnchorView(R.id.buttonLogin)
+                        .setAnchorView(R.id.buttonRegister)
                         .setAction("Action", null).show();
             }
         });
+    }
+
+    public void openLoginActivity(){
+        // Start the LoginActivity when the "LOG IN" button is clicked
+        Intent loginIntent = new Intent(this, LoginActivity.class);
+        startActivity(loginIntent);
+
     }
 }
