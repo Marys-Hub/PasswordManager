@@ -36,7 +36,9 @@
         android:text="LOG IN"
         android:textColor="#000000"
         android:textSize="35sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:focusable="true"
+        android:focusableInTouchMode="true" />
 
     <Button
         android:id="@+id/buttonRegister"
@@ -49,7 +51,9 @@
         android:text="Register"
         android:textColor="#000000"
         android:textSize="35sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:focusable="true"
+        android:focusableInTouchMode="true" />
 
 
 </RelativeLayout>

@@ -2,6 +2,8 @@ package com.example.passwordmanager;
 
 import android.content.Intent;
 import android.os.Bundle;
+import com.google.firebase.auth.FirebaseAuth;
+
 
 import com.google.android.material.snackbar.Snackbar;
 
@@ -30,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
 
 
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -54,25 +57,9 @@ public class MainActivity extends AppCompatActivity {
 
         buttonRegister.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                // Start the RegisterActivity when the "Register" button is clicked
-                Intent registerIntent = new Intent(MainActivity.this, RegisterActivity.class);
-                startActivity(registerIntent);
-            }
+            public void onClick(View v) {openRegisterActivity();}
         });
 
-
-
-
-
-        binding.buttonRegister.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAnchorView(R.id.buttonRegister)
-                        .setAction("Action", null).show();
-            }
-        });
     }
 
     public void openLoginActivity(){
@@ -80,5 +67,10 @@ public class MainActivity extends AppCompatActivity {
         Intent loginIntent = new Intent(this, LoginActivity.class);
         startActivity(loginIntent);
 
+    }
+
+    public void openRegisterActivity(){
+        Intent registerIntent = new Intent(this, RegisterActivity.class);
+        startActivity(registerIntent);
     }
 }
