@@ -1,7 +1,7 @@
 # PasswordManager
 Resembling Apps: Bitwerden, Keychain on IOS 
 -tabel apps similare 
-**Important Features** : 
+## Important Features
 -password storage, 
 -password generator,
 -secure sharing- NOPE  
