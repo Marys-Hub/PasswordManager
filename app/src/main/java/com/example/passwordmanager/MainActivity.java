@@ -64,4 +64,6 @@ public class MainActivity extends AppCompatActivity {
         Intent registerIntent = new Intent(this, RegisterActivity.class);
         try{startActivity(registerIntent);}catch(Exception e){System.out.println("Something went wrong.");} }
 
+    public void funk(){}
+
 }
