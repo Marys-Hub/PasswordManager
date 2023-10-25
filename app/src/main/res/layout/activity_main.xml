@@ -20,7 +20,7 @@
         android:layout_marginBottom="36dp"
         android:fitsSystemWindows="true"
         android:gravity="center_horizontal"
-        android:text="Welcome Back"
+        android:text="@string/welcome_back"
         android:textColor="#00AA00"
         android:textSize="30dp"
         android:textStyle="bold" />
@@ -29,16 +29,16 @@
         android:id="@+id/buttonLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:gravity="center_horizontal"
         android:layout_marginTop="350dp"
         android:backgroundTint="#00AA00"
         android:clickable="true"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:gravity="center_horizontal"
         android:text="LOG IN"
         android:textColor="#000000"
         android:textSize="35sp"
-        android:textStyle="bold"
-        android:focusable="true"
-        android:focusableInTouchMode="true" />
+        android:textStyle="bold" />
 
     <Button
         android:id="@+id/buttonRegister"

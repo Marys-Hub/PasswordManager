@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.example.passwordmanager.databinding.ActivityMainBinding;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.textfield.TextInputEditText;
@@ -21,11 +22,13 @@ public class RegisterActivity extends AppCompatActivity {
 
     Button buttonSignInRegister;
     TextInputEditText editTextEmail, editTextPassword;
+
     FirebaseAuth firebaseAuth = FirebaseAuth.getInstance();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
+        setContentView(R.layout.activity_register_page);
+
 
         editTextEmail = findViewById(R.id.emailTextInputLayout);
         editTextPassword = findViewById(R.id.passwordTextInputLayout);

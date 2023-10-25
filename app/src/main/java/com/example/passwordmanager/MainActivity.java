@@ -25,27 +25,18 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 
-
-    private ActivityMainBinding binding;
     private Button buttonLogin;
     private Button buttonRegister;
-
-
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        //setContentView(R.layout.activity_main); //new
-
-        binding = ActivityMainBinding.inflate(getLayoutInflater());
-        setContentView(binding.getRoot());
+        setContentView(R.layout.activity_main); //new
 
         buttonLogin = (Button) findViewById(R.id.buttonLogin); //new
         buttonRegister =(Button) findViewById(R.id.buttonRegister);//new
 
-
-        //setSupportActionBar(binding.buttonLogin);
 
         buttonLogin.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -71,6 +62,6 @@ public class MainActivity extends AppCompatActivity {
 
     public void openRegisterActivity(){
         Intent registerIntent = new Intent(this, RegisterActivity.class);
-        startActivity(registerIntent);
-    }
+        try{startActivity(registerIntent);}catch(Exception e){System.out.println("Something went wrong.");} }
+
 }
