@@ -1,7 +1,8 @@
-package com.example.passwordmanager;
+package com.example.passwordmanager.activities;
 
 import android.os.Bundle;
 
+import com.example.passwordmanager.R;
 import com.google.android.material.snackbar.Snackbar;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -24,6 +25,7 @@ public class HomePage extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_home_page);
 
         //binding = ActivityHomePageBinding.inflate(getLayoutInflater());
 

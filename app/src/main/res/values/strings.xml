@@ -45,4 +45,6 @@
     </string>
     <string name="title_activity_home_page">HomePage</string>
     <string name="welcome_back">Welcome Back</string>
+    <string name="title_activity_forgot_password">ForgotPasswordActivity</string>
+    <string name="reset_password">Reset Password</string>
 </resources>

@@ -1,26 +1,17 @@
-package com.example.passwordmanager;
+package com.example.passwordmanager.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
-import com.google.firebase.auth.FirebaseAuth;
 
+import com.example.passwordmanager.R;
+import com.example.passwordmanager.activities.LoginActivity;
+import com.example.passwordmanager.activities.RegisterActivity;
 
-import com.google.android.material.snackbar.Snackbar;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.view.View;
 
-import androidx.core.view.WindowCompat;
-import androidx.navigation.NavController;
-import androidx.navigation.Navigation;
-import androidx.navigation.ui.AppBarConfiguration;
-import androidx.navigation.ui.NavigationUI;
-
-import com.example.passwordmanager.databinding.ActivityMainBinding;
-
-import android.view.Menu;
-import android.view.MenuItem;
 import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
