@@ -2,10 +2,10 @@
 
 The password manager app maximizes your password security and keeps your personal data secure.
 Keyshield is the proven cybersecurity leader that protects millions of people and thousands of companies globally.
-## Design:
+## Design
 <img src="https://github.com/Marys-Hub/PasswordManager/assets/115468048/3bae29fa-df8b-42ba-a0a4-b5e8fb1a974f" width=200>
 
-## Features:
+## Features
   - store all passwords securely (with data encryption)
   - automatically generate strong passwords
   - access the passwords from any device
@@ -19,5 +19,7 @@ Keyshield is the proven cybersecurity leader that protects millions of people an
   - customise the app's appearance, including themes and icons
   - hide content for sensitive data before clicked
   - location login analysis and change the master password depending on the current location
-## Resembling Apps:
+## Gantt Chart
+![image](https://github.com/Marys-Hub/PasswordManager/assets/115468048/ba175170-0d4e-4427-912c-39d81429ad77)
+## Resembling Apps
 Bitwerden, Keychain on IOS, Keeper Password Manager, 1Password
