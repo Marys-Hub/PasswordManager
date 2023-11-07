@@ -10,6 +10,10 @@ public abstract class PasswordGenerator {
         else generators = new ArrayList<>();
     }
 
+    public static void add(PasswordGenerator pwdg){
+        generators.add(pwdg);
+    }
+
     public static boolean isEmpty(){
         return generators.isEmpty();
     }

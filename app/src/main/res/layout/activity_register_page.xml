@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/white"
+    android:background="@drawable/register_background"
     tools:context=".activities.RegisterActivity">
 
     <LinearLayout
@@ -18,8 +18,8 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="30dp"
             android:gravity="center"
-            android:text="Create Account"
-            android:textColor="@android:color/black"
+            android:text="@string/create_account"
+            android:textColor="#00AA00"
             android:textSize="35sp"
             android:textStyle="bold" />
 
@@ -32,7 +32,7 @@
                 android:id="@+id/etName"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:hint="Enter Name"
+                android:hint="@string/enter_name"
                 android:inputType="textEmailAddress"
                 android:textColor="@android:color/black" />
 
@@ -252,8 +252,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center"
-                android:text="Sign Up"
-                android:textColor="@android:color/black"
+                android:text="@string/sign_up"
+                android:textColor="#00AA00"
                 android:textSize="17sp"
                 android:textStyle="bold" />
 

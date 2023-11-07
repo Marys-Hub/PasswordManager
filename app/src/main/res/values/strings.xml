@@ -47,4 +47,25 @@
     <string name="welcome_back">Welcome Back</string>
     <string name="title_activity_forgot_password">ForgotPasswordActivity</string>
     <string name="reset_password">Reset Password</string>
+    <string name="log_in">Log in</string>
+    <string name="register">Register</string>
+    <string name="email">Email</string>
+    <string name="premium_safeguard">Premium Safeguard</string>
+    <string name="password">Password</string>
+    <string name="forgot_password">Forgot password?</string>
+    <string name="get_a_new_password">Get a new password</string>
+    <string name="create_account">Create Account</string>
+    <string name="copy">Copy</string>
+    <string name="_8">8</string>
+    <string name="choose_the_password_content">Choose the password Content:</string>
+    <string name="lower_case">Lower Case</string>
+    <string name="upper_case">Upper Case</string>
+    <string name="numeric_value">Numeric Value</string>
+    <string name="special_chars">Special Chars</string>
+    <string name="password_size">Password Size</string>
+    <string name="generate">Generate</string>
+    <string name="enter_name">Enter Name</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="password_generator">Password generator</string>
+    <string name="generate_a_new_and_secure_password">Generate a new and secure password</string>
 </resources>

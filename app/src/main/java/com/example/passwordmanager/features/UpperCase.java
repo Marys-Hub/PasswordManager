@@ -6,6 +6,7 @@ public class UpperCase extends PasswordGenerator {
     @Override
     public String Char() {
         Random r = new Random();
-        return String.valueOf(r.nextInt(26) + 'A');
+        int nr = r.nextInt(26) + 'A';
+        return String.valueOf(Character.toString((char) nr));
     }
 }

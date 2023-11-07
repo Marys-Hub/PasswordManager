@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.PassGenActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="30dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/text_password_result"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="25sp" />
+
+        <Button
+            android:id="@+id/btn_copy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#217B35"
+            android:text="@string/copy" />
+
+        <LinearLayout
+            android:layout_marginTop="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/choose_the_password_content"
+                android:textColor="@color/black" />
+
+            <CheckBox
+                android:checked="false"
+                android:id="@+id/check_lower"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/lower_case" />
+            <CheckBox
+                android:id="@+id/check_upper"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/upper_case" />
+            <CheckBox
+                android:id="@+id/check_numeric"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/numeric_value" />
+            <CheckBox
+                android:id="@+id/check_special_char"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/special_chars" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="@string/password_size"/>
+                <EditText
+                    android:inputType="numberDecimal"
+                    android:gravity="center"
+                    android:id="@+id/edit_pwd_size"
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:text="@string/_8"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/password_size"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/text_error"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="#ffffff"/>
+
+            <Button
+                android:id="@+id/btn_generate"
+                android:layout_marginTop="30dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#217B35"
+                android:text="@string/generate"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -8,7 +8,7 @@ public class SpecialChar extends PasswordGenerator {
     @Override
     public String Char() {
         Random r = new Random();
-        return String.valueOf(r.nextInt(spCharArray.length));
+        return String.valueOf(spCharArray[r.nextInt(spCharArray.length)]);
     }
 }
 

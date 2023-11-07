@@ -1,34 +1,27 @@
 package com.example.passwordmanager.activities;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.LinearLayout;
 
 import com.example.passwordmanager.R;
-import com.google.android.material.snackbar.Snackbar;
-
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.view.View;
-
-import androidx.core.view.WindowCompat;
-import androidx.navigation.NavController;
-import androidx.navigation.Navigation;
-import androidx.navigation.ui.AppBarConfiguration;
-import androidx.navigation.ui.NavigationUI;
-
-import com.example.passwordmanager.databinding.ActivityHomePageBinding;
-
 public class HomePage extends AppCompatActivity {
-
-    private AppBarConfiguration appBarConfiguration;
-    private ActivityHomePageBinding binding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_page);
 
-        //binding = ActivityHomePageBinding.inflate(getLayoutInflater());
-
-
+        LinearLayout linearLayout1 = findViewById(R.id.passGen);
+        linearLayout1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(HomePage.this, PassGenActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 }
