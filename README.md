@@ -8,12 +8,12 @@ Keyshield is the proven cybersecurity leader that protects millions of people an
 ## Features
   - store all passwords securely (with data encryption)
   - automatically generate strong passwords
-  - access the passwords from any device
+  - ❓ access the passwords from any device
   - share passwords and autofill them across all your sites and apps
   - security audit (evaluates the strength and security of stored passwords and offers suggestions for improving security)
   - offline access
   - search and filtering of any password
-  - maximize your security by enabling fingerprint security for instant and secure access/ face recognition
+  - ❓ maximize your security by enabling fingerprint security for instant and secure access/ face recognition
   - includes support for your two-factor authentication (2FA) codes
   - easily switch between multiple Keeper accounts to separate your business and personal data
   - customise the app's appearance, including themes and icons
