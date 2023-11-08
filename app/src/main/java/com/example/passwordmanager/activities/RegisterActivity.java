@@ -130,7 +130,7 @@ public class RegisterActivity extends AppCompatActivity {
             hasNumber = false;
             frameThree.setCardBackgroundColor(Color.parseColor(getString(R.color.colorDefault)));
         }
-        if (password.matches("^(?=.*[_.()]).*$")) {
+        if (password.matches("^(?=.*[_.%!@#$^&*()]).*$")) {
             hasSymbol = true;
             frameFour.setCardBackgroundColor(Color.parseColor(getString(R.color.colorAccent)));
         } else {
