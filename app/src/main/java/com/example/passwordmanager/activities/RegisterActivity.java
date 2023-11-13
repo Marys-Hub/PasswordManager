@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
 import android.annotation.SuppressLint;
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -19,10 +20,12 @@ import android.widget.Toast;
 import com.example.passwordmanager.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.android.gms.tasks.Tasks;
 import com.google.android.material.textfield.TextInputLayout;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.auth.SignInMethodQueryResult;
 import com.google.firebase.auth.UserProfileChangeRequest;
 
 public class RegisterActivity extends AppCompatActivity {
@@ -33,6 +36,8 @@ public class RegisterActivity extends AppCompatActivity {
     private CardView btnRegister;
     private boolean isAtLeast8 = false, hasUppercase = false, hasNumber = false, hasSymbol = false, isRegistrationClickable = false;
     FirebaseAuth firebaseAuth;
+
+    Button btnBack;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,7 +65,7 @@ public class RegisterActivity extends AppCompatActivity {
 
                 if (name.length() > 0 && email.length() > 0 && password.length() > 0) {
                     if (isRegistrationClickable) {
-                        Toast.makeText(RegisterActivity.this, "Registration successfull", Toast.LENGTH_LONG).show();
+                        //Toast.makeText(RegisterActivity.this, "Registration successfull", Toast.LENGTH_LONG).show();
                         signUpUser(name, email, password);
                     }
                 } else {
@@ -77,6 +82,21 @@ public class RegisterActivity extends AppCompatActivity {
             }
         });
         inputChange();
+
+
+       btnBack = findViewById(R.id.btnRegisterBack);
+        btnBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent goBackMain = new Intent(RegisterActivity.this, MainActivity.class);
+                startActivity(goBackMain);
+                finish();
+            }
+        });
+
+
+
+
     }
 
     private void checkEmpty(String name, String email, String password) {
@@ -176,39 +196,51 @@ public class RegisterActivity extends AppCompatActivity {
             }
         });
     }
-
     private void signUpUser(String name, String email, String password) {
+        // Show a progress dialog to indicate the registration process
+        ProgressDialog progressDialog = new ProgressDialog(this);
+        progressDialog.setMessage("Registering...");
+        progressDialog.show();
+
         // Use Firebase Authentication to create a user with email and password
         firebaseAuth.createUserWithEmailAndPassword(email, password)
-                .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
-                    @Override
-                    public void onComplete(Task<AuthResult> task) {
-                        if (task.isSuccessful()) {
-                            // Registration successful, navigate to the login page
-                            FirebaseUser currentUser = firebaseAuth.getCurrentUser();
-                            if (currentUser != null) {
-                                // Set the user's display name
-                                UserProfileChangeRequest profileUpdates = new UserProfileChangeRequest.Builder()
-                                        .setDisplayName(name)
-                                        .build();
-                                currentUser.updateProfile(profileUpdates);
+                .addOnCompleteListener(this, task -> {
+                    // Dismiss the progress dialog regardless of the result
+                    progressDialog.dismiss();
+
+                    if (task.isSuccessful()) {
+                        // Registration successful, navigate to the login page
+                        FirebaseUser currentUser = firebaseAuth.getCurrentUser();
+                        if (currentUser != null) {
+                            // Set the user's display name
+                            UserProfileChangeRequest profileUpdates = new UserProfileChangeRequest.Builder()
+                                    .setDisplayName(name)
+                                    .build();
+                            currentUser.updateProfile(profileUpdates);
+                        }
+
+                        // You can navigate to the login page using an Intent
+                        Intent loginIntent = new Intent(RegisterActivity.this, LoginActivity.class);
+                        startActivity(loginIntent);
+
+                        // Finish the current activity so the user can't go back to it
+                        finish();
+                    } else {
+                        // Registration failed, handle the error
+                        if (task.getException() != null) {
+                            String errorMessage = task.getException().getMessage();
+
+                            // Check if the email is already in use
+                            if (errorMessage != null && errorMessage.contains("email address is already in use")) {
+                                Toast.makeText(RegisterActivity.this, "Email already in use. Please use a different email.", Toast.LENGTH_SHORT).show();
+                            } else {
+                                Toast.makeText(RegisterActivity.this, "Registration failed: " + errorMessage, Toast.LENGTH_SHORT).show();
                             }
-
-                            Toast.makeText(RegisterActivity.this, "Registration successful", Toast.LENGTH_SHORT).show();
-
-                            // You can navigate to the login page using an Intent
-                            Intent loginIntent = new Intent(RegisterActivity.this, LoginActivity.class);
-                            startActivity(loginIntent);
-
-                            // Finish the current activity so the user can't go back to it
-                            finish();
-                        } else {
-                            // Registration failed, handle the error
-                            Toast.makeText(RegisterActivity.this, "Registration failed: " + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
                         }
                     }
                 });
     }
+
 
 
 }
