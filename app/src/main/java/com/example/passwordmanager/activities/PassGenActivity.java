@@ -6,6 +6,7 @@ import android.content.ClipData;
 import android.content.ClipboardManager;
 import android.content.Context;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
@@ -25,6 +26,8 @@ public class PassGenActivity extends AppCompatActivity {
     private TextView textPasswordGenerated,textErrorMessage;
     private CheckBox checkLower, checkUpper,checkSpecialChar, checkNumeric;
     private Button btnGenerate, btnCopy;
+
+    Button btnBack;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -68,6 +71,13 @@ public class PassGenActivity extends AppCompatActivity {
             manager.setPrimaryClip(ClipData.newPlainText("password",textPasswordGenerated.getText().toString()));
             Toast.makeText(this, "Password Copied", Toast.LENGTH_SHORT).show();
         });
+
+        btnBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
+            }
+        });
     }
 
     private void initViews() {
@@ -80,5 +90,6 @@ public class PassGenActivity extends AppCompatActivity {
         checkNumeric = findViewById(R.id.check_numeric);
         btnGenerate = findViewById(R.id.btn_generate);
         btnCopy = findViewById(R.id.btn_copy);
+        btnBack = findViewById(R.id.btnGeneratePassBack);
     }
 }

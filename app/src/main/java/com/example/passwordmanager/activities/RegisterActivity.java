@@ -66,6 +66,7 @@ public class RegisterActivity extends AppCompatActivity {
                 if (name.length() > 0 && email.length() > 0 && password.length() > 0) {
                     if (isRegistrationClickable) {
                         //Toast.makeText(RegisterActivity.this, "Registration successfull", Toast.LENGTH_LONG).show();
+                        //e un delay de la firebase si imi arata succesfull inainte sa verifice daca exista asa ca l-am eliminat
                         signUpUser(name, email, password);
                     }
                 } else {
@@ -127,6 +128,9 @@ public class RegisterActivity extends AppCompatActivity {
     private void registrationDataCheck() {
         String password = etPassword.getText().toString(), email = etEmail.getText().toString(), name = etName.getText().toString();
 
+        // Email validation regular expression
+        String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
+
         checkEmpty(name, email, password);
 
         if (password.length() >= 8) {
@@ -156,6 +160,13 @@ public class RegisterActivity extends AppCompatActivity {
         } else {
             hasSymbol = false;
             frameFour.setCardBackgroundColor(Color.parseColor(getString(R.color.colorDefault)));
+        }
+
+        // Email validation check
+        if (email.matches(emailPattern)) {
+            tvEmailError.setVisibility(View.GONE);
+        } else {
+            tvEmailError.setVisibility(View.VISIBLE);
         }
 
         checkAllData(email);

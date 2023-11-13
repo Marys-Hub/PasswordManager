@@ -98,6 +98,22 @@
                 android:layout_height="wrap_content"
                 android:backgroundTint="#217B35"
                 android:text="@string/generate"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnGeneratePassBack"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#217B35"
+                android:paddingStart="20dp"
+                android:paddingTop="10dp"
+                android:paddingEnd="20dp"
+                android:paddingBottom="10dp"
+                android:text="Back"
+                android:textColor="#003300"
+                app:cornerRadius="10dp"
+                app:icon="@drawable/goback"
+                app:iconGravity="textStart"
+                app:iconTint="@color/black" />
         </LinearLayout>
 
     </LinearLayout>

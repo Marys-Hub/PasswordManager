@@ -59,7 +59,7 @@
                 android:id="@+id/etEmail"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:hint="Enter Email"
+                android:hint="Enter Email (ex:someone@example.com)"
                 android:inputType="textEmailAddress"
                 android:textColor="@android:color/black" />
 

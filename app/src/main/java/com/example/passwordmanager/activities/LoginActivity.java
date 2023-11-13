@@ -23,6 +23,7 @@ public class LoginActivity extends AppCompatActivity {
     TextInputEditText editTextEmail, editTextPassword;
     Button buttonLoginAccount;
     Button buttonNewPassword;
+    Button buttonBack;
     //private ActivityMainBinding binding;
     FirebaseAuth firebaseAuth = FirebaseAuth.getInstance();
 
@@ -38,6 +39,7 @@ public class LoginActivity extends AppCompatActivity {
         editTextPassword = findViewById(R.id.passwordField);
         buttonLoginAccount = findViewById(R.id.buttonLoginAccount);
         buttonNewPassword = findViewById(R.id.newPass);
+        buttonBack = findViewById(R.btnLoginBack);
 
         buttonLoginAccount.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -66,6 +68,13 @@ public class LoginActivity extends AppCompatActivity {
                 Intent goToForgotPass = new Intent(LoginActivity.this, ForgotPasswordActivity.class);
                 startActivity(goToForgotPass);
                 finish();
+            }
+        });
+
+        btnBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
             }
         });
 
