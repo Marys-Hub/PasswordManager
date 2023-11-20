@@ -39,7 +39,7 @@ public class LoginActivity extends AppCompatActivity {
         editTextPassword = findViewById(R.id.passwordField);
         buttonLoginAccount = findViewById(R.id.buttonLoginAccount);
         buttonNewPassword = findViewById(R.id.newPass);
-        buttonBack = findViewById(R.btnLoginBack);
+        //buttonBack = findViewById(R.btnLoginBack); NU MERGE BACK BTN LA LOGIN
 
         buttonLoginAccount.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -71,12 +71,12 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
-        btnBack.setOnClickListener(new View.OnClickListener() {
+        /*btnBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 onBackPressed();
             }
-        });
+        }); */
 
 
     }

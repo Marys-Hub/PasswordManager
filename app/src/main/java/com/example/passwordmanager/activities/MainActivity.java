@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void openRegisterActivity(){
-        Intent registerIntent = new Intent(this, RegisterActivity.class);
+        Intent registerIntent = new Intent(this, EmailverificationActivity.class);
         try{startActivity(registerIntent);}catch(Exception e){System.out.println("Something went wrong.");} }
 
 }

@@ -69,4 +69,5 @@
     <string name="password_generator">Password generator</string>
     <string name="generate_a_new_and_secure_password">Generate a new and secure password</string>
     <string name="back">Back</string>
+    <string name="enter_code" />
 </resources>

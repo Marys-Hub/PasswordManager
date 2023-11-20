@@ -58,6 +58,17 @@ public class RegisterActivity extends AppCompatActivity {
         btnRegister = findViewById(R.id.btnRegister);
         firebaseAuth = FirebaseAuth.getInstance();
 
+
+        FirebaseAuth verifAuth = FirebaseAuth.getInstance();
+        FirebaseUser verifUser = verifAuth.getCurrentUser();
+
+        findViewById(R.id.btnRegister).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+
         findViewById(R.id.btnRegister).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -162,7 +173,7 @@ public class RegisterActivity extends AppCompatActivity {
             frameFour.setCardBackgroundColor(Color.parseColor(getString(R.color.colorDefault)));
         }
 
-        // Email validation check
+        // Email validation check format
         if (email.matches(emailPattern)) {
             tvEmailError.setVisibility(View.GONE);
         } else {
@@ -251,7 +262,4 @@ public class RegisterActivity extends AppCompatActivity {
                     }
                 });
     }
-
-
-
 }
