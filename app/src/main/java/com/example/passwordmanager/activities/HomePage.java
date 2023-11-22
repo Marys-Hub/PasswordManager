@@ -2,7 +2,6 @@ package com.example.passwordmanager.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.LinearLayout;
 
 import com.example.passwordmanager.R;
@@ -16,12 +15,15 @@ public class HomePage extends AppCompatActivity {
         setContentView(R.layout.activity_home_page);
 
         LinearLayout linearLayout1 = findViewById(R.id.passGen);
-        linearLayout1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(HomePage.this, PassGenActivity.class);
-                startActivity(intent);
-            }
+        linearLayout1.setOnClickListener(v -> {
+            Intent intent = new Intent(HomePage.this, PassGenActivity.class);
+            startActivity(intent);
+        });
+
+        LinearLayout linearLayout2 = findViewById(R.id.searchPass);
+        linearLayout2.setOnClickListener(v -> {
+            Intent intent = new Intent(HomePage.this, SearchPassActivity.class);
+            startActivity(intent);
         });
     }
 }

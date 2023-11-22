@@ -2,6 +2,7 @@ package com.example.passwordmanager.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.content.ClipData;
 import android.content.ClipboardManager;
 import android.content.Context;
@@ -17,7 +18,6 @@ import com.example.passwordmanager.R;
 import com.example.passwordmanager.features.PasswordGenerator;
 import com.example.passwordmanager.features.LowerCase;
 import com.example.passwordmanager.features.Numeric;
-import com.example.passwordmanager.features.LowerCase;
 import com.example.passwordmanager.features.SpecialChar;
 import com.example.passwordmanager.features.UpperCase;
 
@@ -38,6 +38,7 @@ public class PassGenActivity extends AppCompatActivity {
         clickListeners();
     }
 
+    @SuppressLint("SetTextI18n")
     private void clickListeners() {
         btnGenerate.setOnClickListener(view -> {
             int passwordSize = Integer.parseInt(editPasswordSize.getText().toString());

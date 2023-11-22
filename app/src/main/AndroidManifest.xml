@@ -16,6 +16,11 @@
             android:name=".activities.EmailverificationActivity"
             android:exported="false" />
         <activity
+            android:name=".activities.SearchPassActivity"
+            android:exported="false"
+            android:label="@string/title_activity_search_pass"
+            android:theme="@style/Theme.PasswordManager" />
+        <activity
             android:name=".activities.PassGenActivity"
             android:exported="false" />
         <activity

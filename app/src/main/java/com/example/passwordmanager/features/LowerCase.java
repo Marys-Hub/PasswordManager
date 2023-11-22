@@ -7,6 +7,6 @@ public class LowerCase extends PasswordGenerator {
     public String Char() {
         Random r = new Random();
         int nr = r.nextInt(26) + 'a';
-        return String.valueOf(Character.toString((char) nr));
+        return Character.toString((char) nr);
     }
 }

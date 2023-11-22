@@ -43,7 +43,7 @@
                 android:textColor="@color/black" />
 
             <CheckBox
-                android:checked="false"
+                android:checked="true"
                 android:id="@+id/check_lower"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

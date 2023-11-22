@@ -68,6 +68,11 @@
     <string name="sign_up">Sign Up</string>
     <string name="password_generator">Password generator</string>
     <string name="generate_a_new_and_secure_password">Generate a new and secure password</string>
-    <string name="back">Back</string>
+    <string name="search_password">Search password</string>
+    <string name="search_and_filter_all_passwords">Search and filter all passwords</string>
+    <string name="title_activity_search_pass">SearchPassActivity</string>
+    <string name="risk_factors">Risk factors</string>
+    <string name="offers_suggestions_for_improving_security">Offers suggestions for improving security</string>
     <string name="enter_code" />
+    <string name="all_passwords">All passwords</string>
 </resources>
