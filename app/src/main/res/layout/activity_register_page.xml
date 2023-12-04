@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/register_background"
+    android:background="@android:color/background_light"
     tools:context=".activities.RegisterActivity">
 
     <LinearLayout
@@ -59,7 +59,7 @@
                 android:id="@+id/etEmail"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:hint="Enter Email (ex:someone@example.com)"
+                android:hint="@string/enter_email_ex_someone_example_com"
                 android:inputType="textEmailAddress"
                 android:textColor="@android:color/black" />
 

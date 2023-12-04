@@ -75,4 +75,6 @@
     <string name="offers_suggestions_for_improving_security">Offers suggestions for improving security</string>
     <string name="enter_code" />
     <string name="all_passwords">All passwords</string>
+    <string name="enter_email_ex_someone_example_com">Enter Email (ex:someone@example.com)</string>
+    <string name="view_all_securely_stored_passwords">View all securely stored passwords</string>
 </resources>

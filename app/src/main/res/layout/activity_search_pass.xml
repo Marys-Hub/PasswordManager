@@ -31,19 +31,17 @@
         android:id="@+id/search_view"
         android:layout_width="375dp"
         android:layout_height="45dp"
-        android:layout_marginTop="68dp"
         android:background="#57FCAA"
-        android:padding="5dp"
         android:queryHint="Search site names"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
 
-        <ListView
-        android:id="@+id/list_view"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-            tools:ignore="MissingConstraints" />
+<!--        <ListView-->
+<!--        android:id="@+id/list_view"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--            tools:ignore="MissingConstraints" />-->
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

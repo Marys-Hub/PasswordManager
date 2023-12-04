@@ -12,10 +12,10 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="250dp"
+        android:layout_marginTop="150dp"
         android:gravity="center_horizontal"
         android:text="@string/forgot_password"
-        android:textColor="#00AA00"
+        android:textColor="#217B35"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -27,17 +27,17 @@
         android:id="@+id/newPass"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="265dp"
-        android:layout_marginEnd="50dp"
+        android:layout_marginTop="170dp"
         android:backgroundTint="#0000"
         android:clickable="true"
         android:focusable="true"
         android:focusableInTouchMode="true"
         android:text="@string/get_a_new_password"
-        android:textColor="#217B35"
+        android:textColor="#00AA00"
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/buttonLoginAccount" />
 
     <com.google.android.material.textfield.TextInputLayout
@@ -60,7 +60,7 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/passwordTextInputLayout"
-        android:layout_width="300dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:boxBackgroundColor="#217B35"
         app:layout_constraintTop_toBottomOf="@id/emailTextInputLayout"
@@ -69,9 +69,10 @@
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/passwordField"
-            android:layout_width="match_parent"
+            android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:hint="@string/password"
+            app:layout_constraintTop_toTopOf="parent"
             android:inputType="textPassword"/>
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -87,7 +88,7 @@
         android:gravity="center_horizontal"
         android:text="@string/log_in"
         android:textColor="#000000"
-        android:textSize="25sp"
+        android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
@@ -97,16 +98,15 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="350dp"
+        android:layout_marginTop="100dp"
         android:gravity="center_horizontal"
         android:text="@string/premium_safeguard"
-        android:textColor="#00AA00"
+        android:textColor="#217B35"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/buttonLoginAccount" />
-
+        app:layout_constraintTop_toTopOf="@+id/newPass" />
 
 
 
