@@ -27,6 +27,7 @@
         app:layout_constraintTop_toBottomOf="@id/button"
         tools:visibility="visible" />
 
+
     <SearchView
         android:id="@+id/search_view"
         android:layout_width="375dp"

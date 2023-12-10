@@ -1,10 +1,11 @@
-package com.example.passwordmanager;
+package com.example.passwordmanager.features;
 
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 
+import com.example.passwordmanager.R;
 import com.example.passwordmanager.activities.MainActivity;
 
 public class SplashScreen extends Activity {

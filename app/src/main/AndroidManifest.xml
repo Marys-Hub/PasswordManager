@@ -13,6 +13,18 @@
         android:theme="@style/Theme.PasswordManager"
         tools:targetApi="31">
         <activity
+            android:name=".activities.DeleteAccountActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.ChangePasswordActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.AddPasswordActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.SettingsActivity"
+            android:exported="false" />
+        <activity
             android:name=".activities.EmailverificationActivity"
             android:exported="false" />
         <activity
@@ -40,7 +52,7 @@
             android:name=".activities.RegisterActivity"
             android:exported="false" />
         <activity
-            android:name=".SplashScreen"
+            android:name=".features.SplashScreen"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

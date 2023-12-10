@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_marginTop="40dp"
     android:background="#ffffff"
     android:orientation="vertical"
@@ -217,22 +218,25 @@
         android:padding="8dp">
 
         <Button
-            android:id="@+id/button1"
+            android:id="@+id/buttonAddPass"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:backgroundTint="#217B35"
             android:textColor="#FFFFFF"
+            android:text="Add password"
             tools:ignore="SpeakableTextPresentCheck" />
 
         <Button
-            android:id="@+id/button2"
+            android:id="@+id/buttonSettings"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:text="Settings"
             android:backgroundTint="#217B35"
             android:textColor="#FFFFFF"
             tools:ignore="SpeakableTextPresentCheck" />
     </LinearLayout>
+
 
 </LinearLayout>

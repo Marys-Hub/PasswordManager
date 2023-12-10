@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".activities.SettingsActivity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/contentBodyColor">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="30dp">
+
+        <TextView
+            style="@style/viewParent.headerText"
+            android:text="@string/settings" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+        </RelativeLayout>
+
+        <Switch
+            android:id="@+id/darkModeSwitch"
+            style="@style/settingsText"
+            android:drawableStart="@drawable/ic_dark_mode"
+            android:minHeight="48dp"
+            android:text="@string/dark_mode"
+            tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnChangePass"
+            style="@style/viewParent.headerText.settingsTextIcon"
+            android:layout_marginTop="10dp"
+            android:text="@string/change_password"
+            app:cornerRadius="10dp"
+            app:drawableLeftCompat="@drawable/ic_edit_password" />
+
+
+        <com.google.android.material.button.MaterialButton
+            style="@style/viewParent.headerText.settingsTextIcon"
+            android:id="@+id/btnDelete"
+            android:text="@string/delete_account"
+            app:cornerRadius="10dp"
+            app:drawableLeftCompat="@drawable/ic_languages" />
+
+
+        <!-- Replace the TextView with MaterialButton for logout -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnLogout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/viewParent.headerText.settingsTextIcon"
+            android:text="@string/logout"
+            app:drawableLeftCompat="@drawable/ic_logout"
+            app:cornerRadius="10dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnBack"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#00cc66"
+            android:paddingStart="20dp"
+            android:paddingTop="10dp"
+            android:paddingEnd="10dp"
+            android:paddingBottom="10dp"
+            android:text="Back"
+            app:icon="@drawable/goback"
+            android:textColor="#003300"
+            app:cornerRadius="10dp"
+            app:iconGravity="textStart"
+            app:iconTint="@color/black" />
+
+    </LinearLayout>
+
+</ScrollView>
+
+
+
