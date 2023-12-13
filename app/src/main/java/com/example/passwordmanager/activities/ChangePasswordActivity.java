@@ -57,7 +57,9 @@ public class ChangePasswordActivity extends AppCompatActivity {
         btnBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                onBackPressed();
+                Intent goToConfirm = new Intent(ChangePasswordActivity.this, SettingsActivity.class);
+                startActivity(goToConfirm);
+                finish();
             }
         });
     }
