@@ -34,6 +34,12 @@ public class HomePage extends AppCompatActivity {
             startActivity(intent);
         });
 
+        LinearLayout linearLayout3 = findViewById(R.id.currentLocation);
+        linearLayout3.setOnClickListener(v -> {
+            Intent intent = new Intent(HomePage.this, LocationActivity.class);
+            startActivity(intent);
+        });
+
 
         btnAddPass=findViewById(R.id.buttonAddPass);
         btnSettings=findViewById(R.id.buttonSettings);
