@@ -14,6 +14,8 @@ import androidx.appcompat.app.AppCompatActivity;
 public class HomePage extends AppCompatActivity {
     Button btnSettings;
     Button btnAddPass;
+    Button btnDelPass;
+    Button btnUpdatePass;
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -40,27 +42,40 @@ public class HomePage extends AppCompatActivity {
             startActivity(intent);
         });
 
+        LinearLayout linearLayout4 = findViewById(R.id.riskFactors);
+        linearLayout4.setOnClickListener(v -> {
+            Intent intent = new Intent(HomePage.this, RiskFactors.class);
+            startActivity(intent);
+        });
+
 
         btnAddPass=findViewById(R.id.buttonAddPass);
         btnSettings=findViewById(R.id.buttonSettings);
+        btnDelPass=findViewById(R.id.deletePassword);
+        btnUpdatePass=findViewById(R.id.updatePassword);
 
-
-        btnSettings.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent goToSettings = new Intent(HomePage.this, SettingsActivity.class);
-                startActivity(goToSettings);
-                finish();
-            }
+        btnSettings.setOnClickListener(v -> {
+            Intent goToSettings = new Intent(HomePage.this, SettingsActivity.class);
+            startActivity(goToSettings);
+            finish();
         });
 
-        btnAddPass.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent goToAdd = new Intent(HomePage.this, AddPasswordActivity.class);
-                startActivity(goToAdd);
-                finish();
-            }
+        btnAddPass.setOnClickListener(v -> {
+            Intent goToAdd = new Intent(HomePage.this, AddPasswordActivity.class);
+            startActivity(goToAdd);
+            finish();
+        });
+
+        btnDelPass.setOnClickListener(v -> {
+            Intent goToDel = new Intent(HomePage.this, DeletePassword.class);
+            startActivity(goToDel);
+            finish();
+        });
+
+        btnUpdatePass.setOnClickListener(v -> {
+            Intent goToUpdate = new Intent(HomePage.this, UpdatePassword.class);
+            startActivity(goToUpdate);
+            finish();
         });
     }
 

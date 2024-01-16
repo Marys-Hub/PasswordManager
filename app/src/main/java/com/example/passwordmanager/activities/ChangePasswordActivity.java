@@ -38,8 +38,7 @@ public class ChangePasswordActivity extends AppCompatActivity {
         progressBar = findViewById(R.id.forgetPasswordProgressbar);
 
         mAuth = FirebaseAuth.getInstance();
-
-
+        
 
         btnReset.setOnClickListener(new View.OnClickListener() {
             @Override

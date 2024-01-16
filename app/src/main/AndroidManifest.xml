@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
-
-    <!-- Added here in order to use location don't know if it will work-->
+    <!-- Added here in order to use location don't know if it will work -->
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-
-
-
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.USE_FINGERPRINT" />
 
     <application
         android:allowBackup="true"
@@ -19,11 +17,31 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PasswordManager"
         tools:targetApi="31">
+        <activity
+            android:name=".activities.SelfieActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.UpdatePassword"
+            android:exported="false" />
+        <activity
+            android:name=".activities.DeletePassword"
+            android:exported="false" />
+        <activity
+            android:name=".activities.RiskFactors"
+            android:exported="false" />
+
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyDE2QuzFLFINovJmIKljMhSo_otmmLdmtE" />
+
         <activity
             android:name=".activities.LocationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.RiskFactorsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".RiskActivity"
             android:exported="false" />
         <activity
             android:name=".activities.DeleteAccountActivity"

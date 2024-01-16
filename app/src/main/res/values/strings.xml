@@ -82,4 +82,10 @@
     <string name="delete_account">Delete Account</string>
     <string name="settings">Settings</string>
     <string name="change_password">Change Password</string>
+    <string name="add_password">Add password</string>
+    <string name="current_location">Current location</string>
+    <string name="username">Username</string>
+    <string name="add_site_to_database">Add Site to Database</string>
+    <string name="site_name">Site Name</string>
+    <string name="add_site">Add Site</string>
 </resources>

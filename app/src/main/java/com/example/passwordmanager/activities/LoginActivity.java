@@ -41,34 +41,28 @@ public class LoginActivity extends AppCompatActivity {
         buttonNewPassword = findViewById(R.id.newPass);
         //buttonBack = findViewById(R.btnLoginBack); NU MERGE BACK BTN LA LOGIN
 
-        buttonLoginAccount.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String email, password;
-                email = String.valueOf(editTextEmail.getText());
-                password = String.valueOf(editTextPassword.getText());
+        buttonLoginAccount.setOnClickListener(v -> {
+            String email, password;
+            email = String.valueOf(editTextEmail.getText());
+            password = String.valueOf(editTextPassword.getText());
 
-                if (TextUtils.isEmpty(email)) {
-                    Toast.makeText(LoginActivity.this, "Enter email", Toast.LENGTH_SHORT).show();
-                    return;
-                }
-                if (TextUtils.isEmpty(password)) {
-                    Toast.makeText(LoginActivity.this, "Enter password", Toast.LENGTH_SHORT).show();
-                    return;
-                }
-
-                // Call the loginUser method
-                loginUser(email, password);
+            if (TextUtils.isEmpty(email)) {
+                Toast.makeText(LoginActivity.this, "Enter email", Toast.LENGTH_SHORT).show();
+                return;
             }
+            if (TextUtils.isEmpty(password)) {
+                Toast.makeText(LoginActivity.this, "Enter password", Toast.LENGTH_SHORT).show();
+                return;
+            }
+
+            // Call the loginUser method
+            loginUser(email, password);
         });
 
-        buttonNewPassword.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v){
-                Intent goToForgotPass = new Intent(LoginActivity.this, ForgotPasswordActivity.class);
-                startActivity(goToForgotPass);
-                finish();
-            }
+        buttonNewPassword.setOnClickListener(v -> {
+            Intent goToForgotPass = new Intent(LoginActivity.this, ForgotPasswordActivity.class);
+            startActivity(goToForgotPass);
+            finish();
         });
 
         /*btnBack.setOnClickListener(new View.OnClickListener() {
