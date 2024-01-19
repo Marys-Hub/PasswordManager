@@ -21,10 +21,10 @@
             android:name=".activities.SelfieActivity"
             android:exported="false" />
         <activity
-            android:name=".activities.UpdatePassword"
+            android:name=".CRUD.UpdatePassword"
             android:exported="false" />
         <activity
-            android:name=".activities.DeletePassword"
+            android:name=".CRUD.DeletePassword"
             android:exported="false" />
         <activity
             android:name=".activities.RiskFactors"
@@ -50,7 +50,7 @@
             android:name=".activities.ChangePasswordActivity"
             android:exported="false" />
         <activity
-            android:name=".activities.AddPasswordActivity"
+            android:name=".CRUD.AddPasswordActivity"
             android:exported="false" />
         <activity
             android:name=".activities.SettingsActivity"

@@ -32,6 +32,7 @@ public class RiskFactors extends AppCompatActivity {
 
     private void analyzePasswords(){
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+        risk.setText("");
         if (user != null) {
             String userId = user.getUid();
             db.collection("users").document(userId).collection("sites").get()
@@ -43,7 +44,6 @@ public class RiskFactors extends AppCompatActivity {
                                 String username = doc.getString("username");
 
                                 String email = user.getEmail();
-                                risk.setText("");
 
                                 if(!checkPasswordStrengthCriteria1(password)){
                                     risk.append("\n• Password for the site " + siteName + " should be at least 8 characters " +
@@ -90,7 +90,6 @@ public class RiskFactors extends AppCompatActivity {
         username = username.toLowerCase();
         email = email.toLowerCase();
         return !password.contains(username) && !password.contains(email);
-
     }
 
     private Boolean checkPasswordStrengthCriteria4(String password) {

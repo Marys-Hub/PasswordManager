@@ -18,7 +18,7 @@ public abstract class PasswordGenerator {
         return generators.isEmpty();
     }
 
-    private static PasswordGenerator getPassGen(){ // isEmpty()
+    private static PasswordGenerator getPassGen(){
         if(generators.size()==1) return generators.get(0);
         int randIdx = (int) (Math.random() * generators.size());
         return generators.get(randIdx);

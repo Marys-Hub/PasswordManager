@@ -43,7 +43,7 @@ public class PassGenActivity extends AppCompatActivity {
         btnGenerate.setOnClickListener(view -> {
             int passwordSize = Integer.parseInt(editPasswordSize.getText().toString());
 
-            textErrorMessage.setText("");
+//            textErrorMessage.setText("");
 
             if(passwordSize<8){
                 textErrorMessage.setText("Password Size must be greater than 8");

@@ -1,6 +1,5 @@
-package com.example.passwordmanager.activities;
+package com.example.passwordmanager.CRUD;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,9 +8,8 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.passwordmanager.R;
+import com.example.passwordmanager.activities.HomePage;
 import com.example.passwordmanager.features.Site;
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;

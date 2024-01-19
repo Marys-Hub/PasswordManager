@@ -1,4 +1,4 @@
-package com.example.passwordmanager.activities;
+package com.example.passwordmanager.CRUD;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,6 +10,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.passwordmanager.R;
+import com.example.passwordmanager.activities.HomePage;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;

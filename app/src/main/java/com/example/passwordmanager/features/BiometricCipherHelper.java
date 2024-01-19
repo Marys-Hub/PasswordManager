@@ -21,7 +21,7 @@ import javax.crypto.SecretKey;
 
 public class BiometricCipherHelper {
 
-    private static final String KEY_ALIAS = "your_key_alias";
+    private static final String KEY_ALIAS = "key_alias";
 
     public static SecretKey generateSecretKey() {
         try {

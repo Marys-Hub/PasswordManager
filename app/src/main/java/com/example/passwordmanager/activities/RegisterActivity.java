@@ -27,6 +27,11 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.SignInMethodQueryResult;
 import com.google.firebase.auth.UserProfileChangeRequest;
+import com.google.firebase.firestore.CollectionReference;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.FirebaseFirestore;
+
+import java.util.HashMap;
 
 public class RegisterActivity extends AppCompatActivity {
 
@@ -36,6 +41,7 @@ public class RegisterActivity extends AppCompatActivity {
     private CardView btnRegister;
     private boolean isAtLeast8 = false, hasUppercase = false, hasNumber = false, hasSymbol = false, isRegistrationClickable = false;
     FirebaseAuth firebaseAuth;
+    private FirebaseFirestore db;
 
     Button btnBack;
 
@@ -61,6 +67,7 @@ public class RegisterActivity extends AppCompatActivity {
 
         FirebaseAuth verifAuth = FirebaseAuth.getInstance();
         FirebaseUser verifUser = verifAuth.getCurrentUser();
+        db = FirebaseFirestore.getInstance();
 
         findViewById(R.id.btnRegister).setOnClickListener(new View.OnClickListener() {
             @Override
@@ -105,9 +112,6 @@ public class RegisterActivity extends AppCompatActivity {
                 finish();
             }
         });
-
-
-
 
     }
 
@@ -179,7 +183,6 @@ public class RegisterActivity extends AppCompatActivity {
         } else {
             tvEmailError.setVisibility(View.VISIBLE);
         }
-
         checkAllData(email);
     }
 
@@ -239,6 +242,9 @@ public class RegisterActivity extends AppCompatActivity {
                                     .setDisplayName(name)
                                     .build();
                             currentUser.updateProfile(profileUpdates);
+                            String user_id = currentUser.getUid();
+                            CollectionReference collectionReference = db.collection("users");
+                            collectionReference.document(user_id).set(new HashMap<>());
                         }
 
                         // You can navigate to the login page using an Intent

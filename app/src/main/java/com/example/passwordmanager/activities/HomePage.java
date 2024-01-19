@@ -3,11 +3,12 @@ package com.example.passwordmanager.activities;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
-import android.widget.Toast;
 
+import com.example.passwordmanager.CRUD.AddPasswordActivity;
+import com.example.passwordmanager.CRUD.DeletePassword;
+import com.example.passwordmanager.CRUD.UpdatePassword;
 import com.example.passwordmanager.R;
 import androidx.appcompat.app.AppCompatActivity;
 
