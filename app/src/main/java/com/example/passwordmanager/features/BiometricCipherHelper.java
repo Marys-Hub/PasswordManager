@@ -44,6 +44,17 @@ public class BiometricCipherHelper {
             return null;
         }
     }
+    public static Cipher createCipher(int mode, SecretKey secretKey) {
+        try {
+            Cipher cipher = Cipher.getInstance("AES/CBC/PKCS7Padding");
+            cipher.init(mode, secretKey);
+            return cipher;
+        } catch (NoSuchAlgorithmException | NoSuchPaddingException |
+                 InvalidKeyException e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
 
     public static SecretKey getSecretKey() {
         try {
@@ -58,18 +69,6 @@ public class BiometricCipherHelper {
             return null;
         } catch (UnrecoverableEntryException e) {
             throw new RuntimeException(e);
-        }
-    }
-
-    public static Cipher createCipher(int mode, SecretKey secretKey) {
-        try {
-            Cipher cipher = Cipher.getInstance("AES/CBC/PKCS7Padding");
-            cipher.init(mode, secretKey);
-            return cipher;
-        } catch (NoSuchAlgorithmException | NoSuchPaddingException |
-                 InvalidKeyException e) {
-            e.printStackTrace();
-            return null;
         }
     }
 }

@@ -113,7 +113,7 @@ public class LocationActivity extends AppCompatActivity implements LocationListe
             LocationServices.getFusedLocationProviderClient(this)
                     .requestLocationUpdates(locationRequest, this, null);
         } else {
-            // Permission is not granted, handle accordingly (e.g., show a message to the user)
+            // Permission is not granted, handle accordingly
             Toast.makeText(this, "Location permission denied", Toast.LENGTH_SHORT).show();
         }
     }
@@ -127,7 +127,7 @@ public class LocationActivity extends AppCompatActivity implements LocationListe
                 // Permission granted, start location updates
                 startLocationUpdates();
             } else {
-                // Permission denied, handle accordingly (e.g., show a message to the user)
+                // Permission denied
                 Toast.makeText(this, "Location permission denied", Toast.LENGTH_SHORT).show();
             }
         }

@@ -2,6 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
     <!-- Added here in order to use location don't know if it will work -->
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.CAMERA" />
@@ -45,7 +49,7 @@
             android:exported="false" />
         <activity
             android:name=".activities.DeleteAccountActivity"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".activities.ChangePasswordActivity"
             android:exported="false" />

@@ -40,7 +40,7 @@ public class RegisterActivity extends AppCompatActivity {
     private CardView frameOne, frameTwo, frameThree, frameFour;
     private CardView btnRegister;
     private boolean isAtLeast8 = false, hasUppercase = false, hasNumber = false, hasSymbol = false, isRegistrationClickable = false;
-    FirebaseAuth firebaseAuth;
+    public FirebaseAuth firebaseAuth;
     private FirebaseFirestore db;
 
     Button btnBack;

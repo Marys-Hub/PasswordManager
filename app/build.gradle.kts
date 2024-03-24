@@ -55,5 +55,12 @@ dependencies {
     implementation("androidx.appcompat:appcompat:1.6.1")
     implementation("androidx.recyclerview:recyclerview:1.3.2")
     implementation("androidx.biometric:biometric:1.1.0")
+    testImplementation( "junit:junit:4.13.2")
+    testImplementation ("org.mockito:mockito-core:3.12.4")// For mocking objects
+    testImplementation ("org.robolectric:robolectric:4.6.1")
+    androidTestImplementation ("com.firebase:firebase-rules-unit-testing:1.0.0")
+
+
+
 }
 apply(plugin = "com.google.gms.google-services")
